@@ -7,9 +7,9 @@
 | 事件 | 日期 | 颱風 | 縣市 |
 |------|------|------|------|
 | 事件 1 | 2024-07-25 | 凱米颱風 | 宜蘭縣、花蓮縣 |
-| 事件 2 | 2024-11-11 | 鳳凰颱風 | 宜蘭縣、花蓮縣 |
+| 事件 2 | 2025-11-11 | 鳳凰颱風 | 宜蘭縣、花蓮縣 |
 
-資料來源：`data/rain_20240725.csv`、`data/rain_20241111.csv`
+資料來源：`data/rain_20240725.csv`、`data/rain_20251111.csv`
 欄位：`StationLatitude`、`StationLongitude`、`Past1hr`（mm/hr）、`CountyName`
 過濾條件：`Past1hr > 0`，排除 `-998`（缺值），投影轉換 EPSG:4326 → EPSG:3826
 
@@ -48,17 +48,17 @@ output/
 ├── variogram_parameters.csv              # 4 組 variogram 參數（2事件 × 2模型）
 ├── variogram_comparison.csv              # A5 跨事件最佳模型比較表
 ├── interpolation_comparison_事件_1_20240725.png
-├── interpolation_comparison_事件_2_20241111.png
+├── interpolation_comparison_事件_2_20251111.png
 ├── kriging_rf_difference_事件_1_20240725.png
-├── kriging_rf_difference_事件_2_20241111.png
+├── kriging_rf_difference_事件_2_20251111.png
 ├── sigma_map_事件_1_20240725.png
-├── sigma_map_事件_2_20241111.png
+├── sigma_map_事件_2_20251111.png
 ├── kriging_rainfall_20240725.tif          # Kriging 結果 GeoTIFF (EPSG:3826)
-├── kriging_rainfall_20241111.tif
+├── kriging_rainfall_20251111.tif
 ├── kriging_variance_20240725.tif          # Kriging Variance GeoTIFF
-├── kriging_variance_20241111.tif
+├── kriging_variance_20251111.tif
 ├── rf_rainfall_20240725.tif               # Random Forest 結果 GeoTIFF
-└── rf_rainfall_20241111.tif
+└── rf_rainfall_20251111.tif
 ```
 
 ## Reflection
